@@ -2,3 +2,5 @@
 /images_raw/
 */.DS_Store
 generate.pyc
+inspect_caffe_net.pyc
+text_generation.pyc

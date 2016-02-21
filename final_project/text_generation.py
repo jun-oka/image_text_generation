@@ -31,7 +31,7 @@ def make_random_text(label):
     print(label)
 
     #カテゴリの行を選択
-    df_selected = df[df['category'] == 'wig']
+    df_selected = df[df['category'] == label]
     df_selected_column = df_selected["text"]
     #print df_selected_column
 
