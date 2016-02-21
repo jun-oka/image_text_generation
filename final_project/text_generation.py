@@ -28,13 +28,13 @@ def make_random_text(label):
 
     #pandasでcsvを読み込み
     df = pd.read_csv('table01.csv', encoding="SHIFT-JIS")
-    print(label)
+    # print(label)
 
     #カテゴリの行を選択
     df_selected = df[df['category'] == label]
     df_selected_column = df_selected["text"]
     #print df_selected_column
-    
+
     #dataFrameを配列に変換
     message = ""
     numpyMatrix = df_selected_column.as_matrix()
@@ -61,16 +61,17 @@ def make_random_text(label):
     prev2= random.choice(list(markov.keys()))
     prev1 = random.choice(list(markov[prev2].keys()))
     sentence = prev2 + prev1
-    while count < 20:
+    while count < 8:
         tmp = random.choice(markov[prev2][prev1])
         sentence += tmp
         prev2 = prev1
         prev1 = tmp
         count += 1
 
-    strs = ["私は","はろー","今日の出来事！"]
+    strs = ["衝撃！","はろー！","今日の出来事！"]
     random_first_text = random.choice(strs)
     final_sentence = random_first_text + sentence
+    
     print(final_sentence)
     
     #str_numpyMatrix = str(numpyMatrix)
