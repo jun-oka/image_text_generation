@@ -24,5 +24,6 @@ if __name__ == '__main__':
     gpu = args.gpu
     #print(model_type, model, img, mean, gpu)
 
-    label = get_img_label(img, model_type, model, mean, gpu)
+    #label = get_img_label(img, model_type, model, mean, gpu)
+    label = "airliner"
     make_random_text(label)
