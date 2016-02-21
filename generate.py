@@ -10,12 +10,13 @@ def wakati(text):
     result = m.rstrip(" \n").split(" ")
     return result
 
+
+
 if __name__ == "__main__":
     filename = "random_text.txt"
     src = open(filename, "r").read()
-    for i in src:
-        print i
     wordlist = wakati(src)
+
 
     # Create table of Markov Chain
     markov = {}
