@@ -67,10 +67,7 @@ def make_random_text(label):
     prev1 = random.choice(list(markov[prev2].keys()))
     sentence = prev2 + prev1
     while count < 20:
-        for i in markov[prev2][prev1]:
-            print(markov[prev2][prev1])
         tmp = random.choice(markov[prev2][prev1])
-
         sentence += tmp
         prev2 = prev1
         prev1 = tmp
