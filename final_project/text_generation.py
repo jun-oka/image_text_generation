@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 # from __future__ import print_function
 # import argparse
 # import os
@@ -34,7 +34,7 @@ def make_random_text(label):
     df_selected = df[df['category'] == label]
     df_selected_column = df_selected["text"]
     #print df_selected_column
-
+    
     #dataFrameを配列に変換
     message = ""
     numpyMatrix = df_selected_column.as_matrix()
@@ -75,7 +75,7 @@ def make_random_text(label):
     
     #str_numpyMatrix = str(numpyMatrix)
 
-    #print str_numpyMatrix 
+    #print str_numpyMatrix
 
     # tmp_message  = ""
 
@@ -83,4 +83,4 @@ def make_random_text(label):
     # 	tmp_message  += line[1]
 
     # message = str(tmp_message)
-    # print message   
+    # print message
