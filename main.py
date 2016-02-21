@@ -41,4 +41,4 @@ print str_numpyMatrix
 # message = str(tmp_message)
 # print message   
 
-wakati(message)
+# wakati(message)
