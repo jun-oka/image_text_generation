@@ -35,14 +35,9 @@ def make_random_text(label):
     df_selected_column = df_selected["text"]
     #print df_selected_column
 
-    print(df_selected_column)
-
     #dataFrameを配列に変換
     message = ""
     numpyMatrix = df_selected_column.as_matrix()
-
-
-
     for i in numpyMatrix:
         message += str(i.encode("utf-8"))
         wordlist = wakati(message)
@@ -67,16 +62,17 @@ def make_random_text(label):
     prev1 = random.choice(list(markov[prev2].keys()))
     sentence = prev2 + prev1
     while count < 20:
-        for i in markov[prev2][prev1]:
-            print(markov[prev2][prev1])
         tmp = random.choice(markov[prev2][prev1])
-
         sentence += tmp
         prev2 = prev1
         prev1 = tmp
         count += 1
 
-    print(sentence)
+    strs = ["私は","はろー","今日の出来事！"]
+    random_first_text = random.choice(strs)
+    final_sentence = random_first_text + sentence
+    print(final_sentence)
+    
     #str_numpyMatrix = str(numpyMatrix)
 
     #print str_numpyMatrix 
